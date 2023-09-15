@@ -7,6 +7,7 @@ pipeline {
             steps {
                 echo 'building the application'
                 sh'docker build -t myimage .'
+                sh'docker tag myimage jeevithals25/myimage'
             }
         }
         stage('deploy') {
